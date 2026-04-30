@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Literária | O Futuro da Leitura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #020617; color: #F5F5DC; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .btn-gold { background-color: #D4AF37; color: #020617; transition: all 0.3s; }
+        .btn-gold:hover { background-color: #bfa032; transform: scale(1.05); }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(212, 175, 55, 0.1); transition: 0.3s; }
+        .glass:hover { border-color: rgba(212, 175, 55, 0.4); }
+        .timer-box { background: rgba(212, 175, 55, 0.1); border: 1px solid #D4AF37; }
+        input, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(212,175,55,0.2) !important; color: white !important; }
+        button:active { transform: scale(0.95); opacity: 0.9; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 glass py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-serif text-gold italic tracking-tighter">Lumina</h1>
+            <div class="space-x-8 hidden md:flex uppercase text-[10px] tracking-[0.2em] font-semibold">
+                <a href="#inicio" class="hover:text-gold transition text-gray-300">Início</a>
+                <a href="#sobre" class="hover:text-gold transition text-gray-300">Sobre</a>
+                <a href="#programacao" class="hover:text-gold transition text-gray-300">Programação</a>
+                <a href="#social" class="hover:text-gold transition text-gray-300">Social</a>
+                <a href="#local" class="hover:text-gold transition text-gray-300">Local</a>
+                <a href="#ingressos" class="hover:text-gold transition text-gray-300">Ingressos</a>
+                <a href="#contato" class="hover:text-gold transition text-gray-300">Contato</a>
+            </div>
+            <button onclick="comprarVip()" class="btn-gold px-6 py-2 rounded text-xs font-bold uppercase tracking-widest">Inscreva-se</button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="pt-48 pb-24 px-6 text-center">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-6xl md:text-8xl font-serif mb-8 leading-tight">A Odisséia Literária <br><span class="text-gold italic">Começa em...</span></h2>
+            <div class="flex justify-center gap-4 md:gap-8 mb-12">
+                <div class="timer-box w-20 h-24 md:w-32 md:h-32 flex flex-col justify-center rounded-lg">
+                    <span id="days" class="text-3xl md:text-5xl font-serif text-gold">00</span>
+                    <span class="text-[10px] uppercase tracking-widest mt-2">Dias</span>
+                </div>
+                <div class="timer-box w-20 h-24 md:w-32 md:h-32 flex flex-col justify-center rounded-lg">
+                    <span id="hours" class="text-3xl md:text-5xl font-serif text-gold">00</span>
+                    <span class="text-[10px] uppercase tracking-widest mt-2">Horas</span>
+                </div>
+                <div class="timer-box w-20 h-24 md:w-32 md:h-32 flex flex-col justify-center rounded-lg">
+                    <span id="minutes" class="text-3xl md:text-5xl font-serif text-gold">00</span>
+                    <span class="text-[10px] uppercase tracking-widest mt-2">Min</span>
+                </div>
+            </div>
+            <p class="text-xl text-gray-400 mb-4 italic"><i class="fa-solid fa-calendar-days mr-2"></i> 15 de Outubro de 2026</p>
+        </div>
+    </section>
+
+    <!-- Seção Social (NOVA) -->
+    <section id="social" class="py-24 px-6 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-4xl font-serif text-center mb-4 text-gold italic">No Radar Digital</h3>
+            <p class="text-center text-gray-400 mb-16 uppercase tracking-widest text-xs">Acompanhe os bastidores da nossa jornada</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="glass rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-slate-800 flex items-center justify-center p-6 text-center border-b border-gold/20">
+                        <p class="text-gold font-serif italic">Ideia Visual: Um livro antigo cujas páginas se transformam em faíscas digitais douradas.</p>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] bg-gold/10 text-gold px-2 py-1 rounded mb-2 inline-block">Post de Antecipação</span>
+                        <p class="text-sm text-gray-300 mb-4 leading-relaxed italic">"Algo grande está sendo escrito em Gramado. Onde a tradição encontra o futuro. Você está pronto para virar a página?"</p>
+                        <div class="flex gap-2 text-[10px] text-gray-500 font-bold">#Lumina2026 #FuturoDaLeitura</div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="glass rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-slate-800 flex items-center justify-center p-6 text-center border-b border-gold/20">
+                        <p class="text-gold font-serif italic">Ideia Visual: Uma linha do tempo futurista (timeline) flutuando sobre o Palácio dos Festivais.</p>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] bg-gold/10 text-gold px-2 py-1 rounded mb-2 inline-block">Post de Cronograma</span>
+                        <p class="text-sm text-gray-300 mb-4 leading-relaxed italic">"Sua jornada literária começa aqui. Workshops de IA, painéis de curadoria e sarau digital. Confira a agenda completa no site."</p>
+                        <div class="flex gap-2 text-[10px] text-gray-500 font-bold">#AgendaLumina #CulturaTech</div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="glass rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-slate-800 flex items-center justify-center p-6 text-center border-b border-gold/20">
+                        <p class="text-gold font-serif italic">Ideia Visual: Colagem artística misturando autores clássicos e interfaces de computador.</p>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] bg-gold/10 text-gold px-2 py-1 rounded mb-2 inline-block">Post de Gêneros</span>
+                        <p class="text-sm text-gray-300 mb-4 leading-relaxed italic">"Do código à poesia. A Lumina celebra a diversidade de gêneros que moldam nossa mente. Qual o seu próximo capítulo?"</p>
+                        <div class="flex gap-2 text-[10px] text-gray-500 font-bold">#LeituraParaTodos #BiblioTech</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legenda Otimizada -->
+            <div class="mt-16 glass p-8 rounded-3xl border-l-4 border-l-gold">
+                <h4 class="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-hashtag"></i> Legenda Otimizada (Copywriting)
+                </h4>
+                <p class="text-gray-300 text-sm leading-relaxed italic">
+                    "Você já sentiu que as páginas de um livro podem conter mundos inteiros? 📖 Na Lumina Literária, esses mundos ganham vida através da tecnologia. Participe do festival que está redefinindo a experiência literária em Gramado. Vagas limitadas para mentes inquietas. ✨ <br><br>🔗 Link na Bio para garantir seu Passe VIP."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- [O restante do seu código permanece igual abaixo...] -->
+    <section id="sobre" class="py-24 px-6 bg-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-4xl font-serif mb-8 text-gold">Quem Somos</h3>
+            <div class="space-y-6 text-gray-300 leading-relaxed text-lg italic">
+                <p>A <strong>Lumina Literária</strong> nasceu da convicção de que a cultura deve ser universal. A tecnologia é a ponte definitiva para a democratização da leitura.</p>
+                <p>Nossa missão é transformar o acesso ao conhecimento através de experiências imersivas no Palácio dos Festivais, em Gramado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programacao" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-4xl font-serif text-center mb-16 text-gold">Cronograma de Imersão</h3>
+            <div class="glass p-8 rounded-3xl overflow-hidden">
+                <table class="w-full text-left text-sm">
+                    <thead class="text-gold uppercase tracking-widest border-b border-white/10">
+                        <tr>
+                            <th class="pb-4">Horário</th>
+                            <th class="pb-4">Atividade</th>
+                            <th class="pb-4">Acesso</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr class="border-b border-white/5">
+                            <td class="py-6 font-bold">09:00</td>
+                            <td class="py-6">Abertura: O Livro no Século XXII</td>
+                            <td class="py-6 text-xs">Standard / VIP</td>
+                        </tr>
+                        <tr class="border-b border-white/5 bg-purple-500/5">
+                            <td class="py-6 font-bold text-purple-400">11:30</td>
+                            <td class="py-6">Workshop: Escrita com IA</td>
+                            <td class="py-6 text-xs font-bold text-purple-400">Apenas VIP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="local" class="py-20 bg-black/40">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-serif mb-6 text-gold">O Cenário: Gramado</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">Av. Borges de Medeiros, 2697 - Centro, Gramado - RS</p>
+            </div>
+            <div class="h-[300px] rounded-2xl overflow-hidden border border-gold/30 shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.4326543260783!2d-50.87498762413149!3d-29.37812997526685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95193237e1933907%3A0x6b772c672b1442a8!2sPal%C3%A1cio%20dos%20Festivais!5e0!3m2!1spt-BR!2sbr!4v1714424000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="ingressos" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass p-12 rounded-3xl border-2 border-gold relative">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-gold text-black px-8 py-2 rounded-full font-black text-sm uppercase tracking-tighter text-black">Últimas Vagas: 88 disponíveis</div>
+                <div class="grid md:grid-cols-2 gap-12 text-left">
+                    <div>
+                        <h4 class="text-3xl font-serif mb-4 text-gold italic">Passe VIP</h4>
+                        <p class="text-4xl font-serif mb-6">R$ 450</p>
+                        <button onclick="comprarVip()" class="w-full btn-gold py-4 rounded-lg font-bold uppercase">Comprar VIP</button>
+                    </div>
+                    <div class="border-l border-white/10 pl-0 md:pl-12 opacity-40">
+                        <h4 class="text-3xl font-serif mb-4 text-gray-500">Standard</h4>
+                        <p class="text-4xl font-serif mb-6">R$ 120</p>
+                        <button onclick="listaEspera()" class="w-full border border-gray-700 py-4 rounded-lg font-bold uppercase tracking-widest cursor-not-allowed">Esgotado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 px-6 bg-white/5">
+        <div class="max-w-xl mx-auto glass p-10 rounded-3xl text-center">
+            <h3 class="text-3xl font-serif mb-8 text-gold italic">Fale Conosco</h3>
+            <form class="space-y-4">
+                <input type="text" placeholder="Seu Nome" class="w-full p-4 rounded-xl outline-none">
+                <input type="email" placeholder="E-mail" class="w-full p-4 rounded-xl outline-none">
+                <textarea placeholder="Mensagem" rows="3" class="w-full p-4 rounded-xl outline-none"></textarea>
+                <button type="button" class="btn-gold w-full py-4 rounded-xl font-bold uppercase tracking-widest">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 text-gray-600 text-[10px] uppercase">
+        Lumina Literária © 2026 | Gramado, RS
+    </footer>
+
+    <!-- Chatbot e Janelas -->
+    <div id="chat-bubble" onclick="toggleChat()" class="fixed bottom-6 right-6 w-16 h-16 bg-gold rounded-full flex items-center justify-center cursor-pointer shadow-2xl z-[999] hover:scale-110 transition">
+        <i class="fa-solid fa-comment-dots text-black text-2xl"></i>
+    </div>
+
+    <div id="chat-window" class="fixed bottom-24 right-6 w-80 md:w-96 glass rounded-2xl hidden z-[999] flex flex-col overflow-hidden shadow-2xl border border-gold/30">
+        <div class="bg-gold p-4 flex justify-between items-center text-black font-bold uppercase text-[10px] tracking-widest">
+            <span>Assistente Lumina</span>
+            <button onclick="toggleChat()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="chat-messages" class="h-64 p-4 overflow-y-auto flex flex-col gap-3 text-[11px] bg-black/80">
+            <div class="bg-white/10 p-3 rounded-lg self-start max-w-[80%]">
+                Olá! Pergunte sobre <b>Data</b>, <b>Gêneros</b> ou <b>Inscrição</b>.
+            </div>
+        </div>
+        <div class="p-4 border-t border-white/10 flex gap-2">
+            <input type="text" id="user-input" placeholder="Digite aqui..." class="flex-grow bg-white/10 p-2 rounded-lg text-xs outline-none focus:border-gold">
+            <button onclick="enviarMensagem()" class="text-gold"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // Scripts de Cronômetro, Chatbot e Botões permanecem os mesmos conforme sua lógica.
+        const eventDate = new Date("Oct 15, 2026 09:00:00").getTime();
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const dist = eventDate - now;
+            document.getElementById("days").innerText = Math.floor(dist / 86400000).toString().padStart(2, '0');
+            document.getElementById("hours").innerText = Math.floor((dist % 86400000) / 3600000).toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = Math.floor((dist % 3600000) / 60000).toString().padStart(2, '0');
+        }, 1000);
+
+        function toggleChat() { document.getElementById('chat-window').classList.toggle('hidden'); }
+        function enviarMensagem() {
+            const input = document.getElementById('user-input');
+            const messagesArea = document.getElementById('chat-messages');
+            const text = input.value.trim().toLowerCase();
+            if (!text) return;
+            messagesArea.innerHTML += `<div class="bg-gold/20 p-2 rounded-lg self-end text-gold border border-gold/20">${input.value}</div>`;
+            let resp = "🤔 Tente: 'Data', 'Gêneros' ou 'Inscrição'.";
+            if (text.includes("data") || text.includes("Data")) { resp = "📅 15 de Outubro de 2026, em Gramado/RS."; } 
+            else if (text.includes("genero") || text.includes("gênero")) { resp = "📚 Ficção, Tecnologia, Clássicos e IA."; } 
+            else if (text.includes("inscricao") || text.includes("inscrição")) { resp = "🎟️ Clique em 'Inscreva-se' no topo. VIP disponível!"; }
+            setTimeout(() => {
+                messagesArea.innerHTML += `<div class="bg-white/10 p-2 rounded-lg self-start max-w-[80%]">${resp}</div>`;
+                messagesArea.scrollTop = messagesArea.scrollHeight;
+            }, 400);
+            input.value = "";
+        }
+        document.getElementById('user-input').addEventListener('keypress', (e) => { if (e.key === 'Enter') enviarMensagem(); });
+
+        function comprarVip() { alert("✨ Redirecionando para o checkout VIP seguro..."); }
+        function listaEspera() { 
+            const email = prompt("Ingressos Standard esgotados! Digite seu e-mail:");
+            if(email && email.includes("@")) alert("Confirmado! Avisaremos em: " + email);
+        }
+    </script>
+</body>
+</html>
